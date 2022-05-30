@@ -1,0 +1,33 @@
+SELECT `name`,`surname`,`date_of_birth` 
+FROM `students` 
+WHERE YEAR(`date_of_birth`) = '1990';
+
+SELECT `name`,`cfu` 
+FROM `courses` 
+WHERE `cfu` > 10;
+
+SELECT `name`,`surname`, `date_of_birth` 
+FROM `students` 
+WHERE YEAR(CURRENT_DATE) - YEAR(`date_of_birth`) >= '30';
+
+SELECT `name`,`degree_id`
+FROM `courses`
+WHERE `period` = 'I%' 
+AND `year` = '1';
+
+SELECT `course_id`,`date`,`hour`
+FROM `exams`
+WHERE TIME(`hour`) > '14:00:00'
+AND DATE(`date`) = '2020-06-20';
+
+SELECT `name`, `level` 
+FROM `degrees` 
+WHERE `level` = 'magistrale';
+
+SELECT COUNT(*)
+FROM `departments`;
+
+SELECT COUNT(*)
+FROM `teachers`
+WHERE `phone` IS NULL;
+
