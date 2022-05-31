@@ -1,0 +1,15 @@
+SELECT COUNT(*) 
+FROM `students` 
+GROUP BY YEAR(`enrolment_date`);
+
+SELECT COUNT(*) 
+FROM `teachers` 
+GROUP BY `office_address`;
+
+SELECT AVG(`vote`)
+FROM `exam_student`
+GROUP BY `exam_id`;
+
+SELECT COUNT(*) 
+FROM `degrees` 
+GROUP BY `department_id`;
